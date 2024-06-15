@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Music Player</h2>
+    <div class="input-container">
+        <input type="file" name="file" accept="audio/mp3" multiple id="file" class="audio-files">
+        <label for="file">Choose Songs</label>
+    </div>
+    
+    <table id=musicTable>
+        <thead>
+            <tr>
+                <th>Playlist</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Songs will be dynamically added -->
+        </tbody>
+    </table>
+
+    <div class="controls">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="buttons">
+            <button class="prev">◀</button>
+            <button class="play-pause">▶</button>
+            <button class="next">▶</button>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-container{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.input-container input[type="file"]{
+    display: none;
+}
+
+.input-container label{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#musicTable{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+#musicTable th,
+#musicTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+#musicTable tr{
+    cursor: pointer;
+}
+
+#musicTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+
+#musicTable thead{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    
+}
+
+.controls{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.progress-bar{
+    height: 10px;
+    width: 50%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 20px; 
+   
+} 
+
+ .progress{
+    height: 100%;
+    width: 50%;
+    background-color: #007bff;
+    border-radius: 5px;
+    }
+
+.buttons{
+    display: flex;
+    gap: 8px;
+}
+
+button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 15px;
+    margin-right: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:focus{
+    outline: none;
+}
+
+button.play-pause{
+    background-color: #28a745;
+}
+
+button.play-pause:hover{
+    background-color: #218838;
+}
