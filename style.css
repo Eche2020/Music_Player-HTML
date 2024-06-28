@@ -1,124 +1,147 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #202020;
+	color: #fafafa;
 }
 
-.input-container{
-    text-align: center;
-    margin: 20px 0;
+h5 {
+	color: #ffffff20;
+	font-size: 1.5rem;
+	font-weight: 100;
+	text-transform: uppercase;
+	margin: 1rem;
 }
 
-.input-container input[type="file"]{
-    display: none;
+.input-container {
+	display: flex;
+	justify-content: end;
+	padding: 0 1rem 1rem 0;
+	border-bottom: 2px solid #000000;
 }
 
-.input-container label{
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+.input-container input[type="file"] {
+	display: none;
 }
 
-#musicTable{
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    overflow-x: auto;
+.input-container label {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.music-table-wrapper {
+	overflow: auto;
+	max-height: 100%;
+}
+#musicTable {
+	width: 100%;
+	margin-top: 1rem;
+	border-collapse: collapse;
+	text-align: left;
 }
 
 #musicTable th,
-#musicTable td{
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-    
+#musicTable td {
+	padding: 0.8rem 1rem;
+	color: #c0c0c0;
 }
 
-#musicTable tr{
-    cursor: pointer;
+#musicTable tr {
+	cursor: pointer;
 }
 
-#musicTable tr:nth-child(even){
-    background-color: #f2f2f2;
+#musicTable tr:nth-child(even) {
+	background-color: #fafafa05;
 }
 
-
-#musicTable thead{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #4caf50;
-    color: #fff;
-    
+#musicTable thead {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #00000050;
+	color: #fff;
 }
 
-.controls{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    padding: 10px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border-top: 1px solid #ddd;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+#musicTable tbody tr {
+	cursor: pointer;
 }
 
-.progress-bar{
-    height: 10px;
-    width: 50%;
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 0 20px; 
-   
-} 
-
- .progress{
-    height: 100%;
-    width: 50%;
-    background-color: #007bff;
-    border-radius: 5px;
-    }
-
-.buttons{
-    display: flex;
-    gap: 8px;
+#musicTable tbody tr:hover {
+	background: #007bff;
 }
 
-button{
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 15px 15px;
-    margin-right: 7px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+[for="file"] input {
+	position: absolute;
+	opacity: 0;
 }
 
-button:focus{
-    outline: none;
+.no-playlist {
+	text-align: center;
+	font-style: italic;
+	display: block;
+	color: gray;
+}
+.controls {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #202020;
+	padding: 10px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border-top: 1px solid #000000;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 100;
 }
 
-button.play-pause{
-    background-color: #28a745;
+.progress-bar {
+	height: 10px;
+	width: 50%;
+	background-color: #ddd;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 20px;
 }
 
-button.play-pause:hover{
-    background-color: #218838;
+.progress {
+	height: 100%;
+	width: 50%;
+	background-color: #007bff;
+	border-radius: 5px;
+}
+
+.buttons {
+	display: flex;
+	gap: 8px;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 15px 15px;
+	margin-right: 7px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button:focus {
+	outline: none;
+}
+
+button.play-pause {
+	background-color: #007bff;
+}
+
+button.play-pause:hover {
+	background-color: #218838;
 }
